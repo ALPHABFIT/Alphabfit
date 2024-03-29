@@ -86,6 +86,15 @@ section {
   font-family: var(--font-default);
 }
 
+.whatsapp_main {
+  position: fixed;
+  top: 18%;
+  margin-left:  25rem;
+}
+
+
+
+
 .section-header p {
   margin: 0;
   font-size: 48px;
@@ -159,8 +168,8 @@ section {
 /*--------------------------------------------------------------
 # Scroll top button
 --------------------------------------------------------------*/
-.scroll-top {
-  position: fixed;
+.scroll-top{
+  position:  fixed;
   visibility: hidden;
   opacity: 0;
   right: 15px;
@@ -187,6 +196,19 @@ section {
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
+}
+
+
+
+.whatsapp_img {
+  position:  fixed;
+  opacity: 1;
+  right: 17px;
+  bottom: 106px;
+  z-index: 99999;
+  width: 50px;
+  height: 50px;
+  transition: all 0.4s;
 }
 
 /*--------------------------------------------------------------
