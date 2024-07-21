@@ -290,7 +290,7 @@ section {
 .header .logo img {
   max-height: 18vh;
   margin-right: 6px;
-  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+  /* filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5)); */
 }
 
 .header .logo h1 {
