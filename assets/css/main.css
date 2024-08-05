@@ -269,7 +269,7 @@ section {
 # Header
 --------------------------------------------------------------*/
 .header {
-  background: #fff;
+  background: #121010;
   transition: all 0.5s;
   z-index: 997;
   height: 90px;
@@ -283,8 +283,8 @@ section {
 }
 
 .header.sticked {
-  border-color: #fff;
-  border-color: #eee;
+  border-color: #191515;
+  border-color: #0b0808;
 }
 
 .header .logo img {
@@ -296,7 +296,7 @@ section {
 .header .logo h1 {
   font-size: 28px;
   font-weight: 700;
-  color: #000;
+  color: #8f8b8b;
   margin: 0;
   font-family: var(--font-secondary);
 }
@@ -356,7 +356,7 @@ section {
     font-family: var(--font-secondary);
     font-size: 16px;
     font-weight: 600;
-    color: #7f7f90;
+    color: #f2f2f7;
     white-space: nowrap;
     transition: 0.3s;
     position: relative;
@@ -393,7 +393,7 @@ section {
   .navbar .active,
   .navbar .active:focus,
   .navbar li:hover>a {
-    color: #000;
+    color: #969696;
   }
 
   .navbar .dropdown ul {
@@ -1673,4 +1673,128 @@ section {
 
 .footer .credits a {
   color: #fff;
+}
+
+.heros {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.heros-image {
+  width: 100%;
+  height: auto;
+}
+
+.heros-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Add a dark overlay for better text visibility */
+  padding: 20px;
+}
+
+.heros-text h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.heros-text p {
+  font-size: 1.2em;
+}
+
+.credentials {
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+.content {
+  padding: 20px;
+}
+
+.trainer-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.badge,
+.explanation {
+  width: 45%;
+  text-align: center;
+  border: 2px solid black;
+  padding: 20px;
+}
+
+.heros-title {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  font-size: clamp(12px, 4vw, 32px);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.credentials-box p {
+  font-size: 1.5vw; /* Use viewport width units for responsiveness */
+  margin-top: 10px;
+}
+
+.heros-text-box,
+.credentials-box {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Add a dark overlay for better text visibility */
+    padding: 10px 20px;
+    margin-top: 10px;
+    width: 80%; /* Set a width for the box */
+    border-radius: 8px;
+}
+
+.heros-text-box {
+    top: 47%;
+    width: 30%;
+}
+
+.credentials-box {
+    top: 50%;
+    width: 60%;
+}
+
+.heros-text-box p,
+.credentials-box p {
+  font-size: clamp(10px, 2vw, 18px);
+  color: white;
+  font-weight: 600;
+}
+
+/* Loading logo styles */
+.loading-logo {
+  position: absolute; /* Position it absolutely within its container */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loading-logo img {
+  width: 120px; /* Adjust the size as needed */
+  height: auto;
+  animation: spin 2s linear infinite, scale 1.5s ease-in-out infinite;
+}
+
+/* Spin animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Scale animation */
+@keyframes scale {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
 }
