@@ -15,6 +15,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=New+Amsterdam&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=New+Amsterdam&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @font-face {
   font-family: thisFont;
   src: url(/assets/fonts/Break\ Brush.ttf);
@@ -1908,6 +1912,9 @@ section {
     font-size: clamp(6px, 2vw, 10px);
     font-weight: 600;
   }
+  .anim-title {
+    height: 7vh;
+  }
 }
 
 
@@ -1937,10 +1944,13 @@ section {
 .badge-para {
   font-size: 9px;
 }
+.anim-title {
+  height: 7vh;
+}
 
 }
 
-@media screen and (max-width: 376px) {
+@media screen and (max-width: 396px) {
   .hero-title {
     width: 70%;
     font-size: clamp(25px, 5vw, 48px);
@@ -1966,6 +1976,85 @@ section {
 
   .badge-para {
     font-size: 6px;
+  }
+
+}
+
+
+
+/* Animations */
+
+.animated-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  position: relative;
+  height: 50px;
+  overflow: hidden;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.5vw;
+  font-style: italic !important;
+  line-height: 40px;
+  font-weight: 400;
+  color: #ecf0f1;
+  letter-spacing: 2px;
+}
+
+.content__container {
+  font-weight: 500;
+  overflow: hidden;
+  height: 30px;
+  position: relative;
+  margin-top: -10px; /* Adjust this value to move the container up */
+}
+
+.content__container:before,
+.content__container:after {
+  position: absolute;
+  top: 0;
+  color: #16a085;
+  font-size: 2.7vw;
+  font-style: italic;
+  line-height: 40px;
+  opacity: 0;
+  animation: opacity 2s infinite;
+}
+
+.content__container__list {
+  margin: 0;
+  list-style: none;
+  animation: change 10s infinite;
+}
+
+.content__container__list__item {
+  line-height: 40px;
+  margin: 0;
+}
+
+@keyframes opacity {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes change {
+  0%, 90%, 100% { transform: translate3d(0, 0, 0); }
+  100%, 45% { transform: translate3d(0, -100%, 0); }
+  99.66%, 100% { transform: translate3d(0, -200%, 0); }
+}
+
+
+
+@media screen and (max-width: 390px) {
+  .badge-img {
+    height: 30vh;
+    margin-left: 5px;
+  }
+
+  .content {
+    font-size: 4vw;
   }
 
 }
