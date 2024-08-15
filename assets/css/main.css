@@ -1593,6 +1593,8 @@ section {
   .hero img {
     margin-top: 5rem !important;
   }
+  
+
 }
 
 
@@ -1855,6 +1857,8 @@ section {
   font-size: clamp(10px, 2vw, 18px);
   color: white;
   font-weight: 700;
+  font-family: "Poppins", sans-serif;
+
 }
 
 /* Loading logo styles */
@@ -1936,8 +1940,12 @@ section {
 .badge-text {
   margin-top: 2rem;
 }
-
-
+.logo {
+  height: 80px;
+}
+.look {
+  font-size: 8px;
+}
 .badge-img {
   margin-left: 1rem;
 }
@@ -1948,7 +1956,26 @@ section {
   height: 7vh;
 }
 
+.hero-title {
+  font-size: 22px;
+  margin-top: 3rem;
 }
+
+.badge-img {
+  margin-top: 0%;
+  margin-left: 0%;
+}
+
+.heros-text-box h3,
+.credentials-box h3 {
+  font-size: clamp(8px, 2vw, 18px);
+  color: white;
+  font-weight: 700;
+}
+.heros-text-box {
+  width: 50%;
+}
+
 
 @media screen and (max-width: 396px) {
   .hero-title {
@@ -1964,7 +1991,6 @@ section {
     margin-top: 4rem;
     font-size: clamp(9px, 2vw, 10px);
     padding: 6px 18px;
-    margin-top: 4rem;
   }
   .badge-img {
     margin-left: 1.6rem;
