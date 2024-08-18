@@ -11,6 +11,8 @@
 # Learn more about CSS variables at https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 --------------------------------------------------------------*/
 /* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Bebas+Neue&family=Jersey+10&family=New+Amsterdam&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Jersey+10&family=New+Amsterdam&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -1703,6 +1705,17 @@ section {
   font-size: clamp(14px, 3vw, 30px);
 }
 
+.join-prgm h5 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(14px, 3vw, 30px);
+}
+
+/* .join-prgm h4 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2.5vw;
+  font-style: italic !important;
+} */
+
 
 .about-para {
   margin: auto;
@@ -1715,6 +1728,9 @@ section {
   font-size: clamp(4px, 2vw, 19px);
   font-weight: 400;
 }
+
+
+.
 
 
 /*--------------------------------------------------------------
@@ -1943,6 +1959,28 @@ section {
   50% { transform: scale(1.1); }
 }
 
+.icon-prgms {
+  height: 9vh;
+}
+
+.prgm-title {
+  display: flex;
+  align-items: center;
+}
+.prgm-title h2 {
+  font-family: "Acme", sans-serif;
+
+}
+
+.prgm-para p {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(4px, 2vw, 19px);
+  font-weight: 400;
+}
+
+
+
+
 
 
 /* Media Queries for Hero Section */
@@ -2158,4 +2196,86 @@ section {
     margin-top: 8rem !important;
 }
   
+}
+
+
+.glitch {
+  font-family: "Bebas Neue", sans-serif; /* Font family */
+  font-size: 2.5vw; /* Font size based on viewport width */
+  font-style: italic !important; /* Italic style */
+  text-transform: uppercase;
+  position: relative;
+  text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00;
+  animation: glitch 725ms infinite;
+  color: white;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.glitch span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.6;
+}
+
+.glitch span:first-child {
+  animation: glitch 500ms infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
+  transform: translate(12.50em, -0.02em);
+  letter-spacing: 3px;
+}
+
+.glitch span:last-child {
+  animation: glitch 375ms infinite;
+  clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+  transform: translate(12.55em, 0.02em);
+  letter-spacing: 3px;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00;
+  }
+  15% {
+    text-shadow: 0.05em 0 0 #00fffc, -0.03em -0.04em 0 #fc00ff, 0.025em 0.04em 0 #fffc00;
+  }
+  16% {
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff, -0.05em -0.05em 0 #fffc00;
+  }
+  49% {
+    text-shadow: -0.05em -0.025em 0 #00fffc, 0.025em 0.035em 0 #fc00ff, -0.05em -0.05em 0 #fffc00;
+  }
+  50% {
+    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff, 0 -0.04em 0 #fffc00;
+  }
+  99% {
+    text-shadow: 0.05em 0.035em 0 #00fffc, 0.03em 0 0 #fc00ff, 0 -0.04em 0 #fffc00;
+  }
+  100% {
+    text-shadow: -0.05em 0 0 #00fffc, -0.025em -0.04em 0 #fc00ff, -0.04em -0.025em 0 #fffc00;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .glitch span:first-child {
+    transform: translate(10.02em, -0.02em); 
+  }
+  .glitch span:last-child {
+    transform: translate(10.06em, 0.02em);
+  }
+
+}
+
+.faq h3 {
+  text-align: center;
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.accordion {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.accordion-header {
+  font-family: "Bebas Neue", sans-serif;
 }
