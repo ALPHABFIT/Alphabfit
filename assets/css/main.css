@@ -11,6 +11,8 @@
 # Learn more about CSS variables at https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 --------------------------------------------------------------*/
 /* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Bebas+Neue&family=Jersey+10&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=New+Amsterdam&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Bebas+Neue&family=Jersey+10&family=Montserrat:ital,wght@0,100..900;1,100..900&family=New+Amsterdam&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Acme&family=Bebas+Neue&family=Jersey+10&family=New+Amsterdam&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -1693,7 +1695,7 @@ section {
   font-family: "Jersey 10", sans-serif !important;
   color: #fff;
   text-align: center;
-  font-size: clamp(14px, 3vw, 30px);
+  font-size: clamp(18px, 3vw, 30px);
 }
 
 .join-prgm h5 {
@@ -1823,6 +1825,12 @@ section {
   color: white;
 }
 
+.client-img {
+  border-radius: 12px;
+  filter: drop-shadow(0 0 0.75rem rgb(150, 149, 149));
+  z-index: -1;
+}
+
 .heros-image {
   width: 100%;
   height: auto;
@@ -1927,6 +1935,85 @@ section {
 
 }
 
+.overview {
+  font-size: clamp(10px, 1.5vw, 1.25rem);
+  line-height: 1.6;
+}
+
+/* List styling within overview */
+.overview ul {
+  padding-left: 1.5rem;
+}
+
+.overview li {
+  margin-bottom: 0.75rem;
+}
+
+.overview-head h2 {
+  font-size: clamp(16px, 2vw, 1rem); /* Adjust the min, preferred, and max as needed */
+  margin-bottom: 10px; /* Optional: Adds some spacing after the heading */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+
+
+
+.phase h2 {
+  font-family: "Kanit", sans-serif !important;
+  color: #fff;
+  text-align: center;
+  font-size: clamp(14px, 2vw, 30px);
+}
+
+.contact h2 {
+  font-family: "Kanit", sans-serif !important;
+  color: #fff;
+  text-align: center;
+  font-size: clamp(14px, 2vw, 30px);
+}
+
+.fold {
+  position: relative;
+  height: 200px;
+  padding: 25px;
+  background: #E8E9EB;
+  width: 68%;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+/* folding */
+.fold::before {
+  content:"";
+  position: absolute;
+  top: 0px;
+  right: -1px;
+  border-style: solid;
+  border-width: 0 35px 40px 0;
+  border-color: #ddd #fff;
+  transition: all ease 0.5s;
+  box-shadow: none !important; /* Removes shadow from folded corner */
+}
+.fold:hover::before {
+  border-width: 0 60px 50px 0;
+  border-color: #eee #fff
+}
+
+
+.fold h3 {
+  font-size: clamp(16px, 2vw, 1rem); /* Adjust the min, preferred, and max as needed */
+  margin-bottom: 10px; /* Optional: Adds some spacing after the heading */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.fold ul li {
+  font-size: clamp(10px, 2vw, 1rem); /* Adjust the min, preferred, and max as needed */
+  line-height: 1.5; /* Optional: Adjusts the spacing between lines */
+}
+
+
+
 /* Loading logo styles */
 .loading-logo {
   position: absolute; /* Position it absolutely within its container */
@@ -1990,6 +2077,36 @@ section {
   }
 }
 
+@media only screen and (min-width: 1000px) {
+  .join-prgm {
+    height: 12vh !important;
+    margin-top: 1.5rem !important;
+  }
+  .phase-head {
+    margin-top: 1.5rem !important;
+  }
+  .contact {
+    height: 18vh !important;
+  }  
+}
+
+@media only screen and (max-width: 500px) {
+  .anim-title {
+    height: 4vh !important  ;
+  }
+  .content {
+    font-size: 4vw !important;
+  }
+  .content__container {
+    height: 20px !important;
+  }
+  .contact {
+    height: 14vh !important;
+    margin-top: 10px !important;
+  }
+  
+}
+
 
 @media screen and (max-width: 1200px) {
   .heros-text-box,
@@ -2010,9 +2127,9 @@ section {
   .anim-title {
     height: 7vh;
   }
-  .join-prgm {
+  /* .join-prgm {
     height: 3vh;
-  }
+  } */
 }
 
 
@@ -2201,7 +2318,7 @@ section {
 
 .glitch {
   font-family: "Bebas Neue", sans-serif; /* Font family */
-  font-size: 2.5vw; /* Font size based on viewport width */
+  font-size: 3.2vw; /* Font size based on viewport width */
   font-style: italic !important; /* Italic style */
   text-transform: uppercase;
   position: relative;
@@ -2223,14 +2340,14 @@ section {
 .glitch span:first-child {
   animation: glitch 500ms infinite;
   clip-path: polygon(0 0, 100% 0, 100% 40%, 0 40%);
-  transform: translate(12.50em, -0.02em);
+  transform: translate(8.5em, -0.02em);
   letter-spacing: 3px;
 }
 
 .glitch span:last-child {
   animation: glitch 375ms infinite;
   clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
-  transform: translate(12.55em, 0.02em);
+  transform: translate(8.50em, 0.02em);
   letter-spacing: 3px;
 }
 
@@ -2260,10 +2377,10 @@ section {
 
 @media screen and (max-width: 426px) {
   .glitch span:first-child {
-    transform: translate(10.02em, -0.02em); 
+    transform: translate(6.62em, -0.02em); 
   }
   .glitch span:last-child {
-    transform: translate(10.06em, 0.02em);
+    transform: translate(6.60em, 0.02em);
   }
 
 }
