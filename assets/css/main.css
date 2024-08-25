@@ -2104,9 +2104,28 @@ section {
     height: 14vh !important;
     margin-top: 10px !important;
   }
+
+  .carousel-inner img {
+    height: 50vh !important;
+  }
+
+  .carousel-item {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
   
 }
 
+.carousel-control-next-icon {
+  background-color: grey;
+  border-radius: 50%;
+}
+
+/* Optionally, change the color of the previous arrow icon */
+.carousel-control-prev-icon {
+  background-color: grey;
+  border-radius: 50%;
+}
 
 @media screen and (max-width: 1200px) {
   .heros-text-box,
